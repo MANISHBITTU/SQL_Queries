@@ -1,0 +1,41 @@
+--I have 5 Tables employee,client,branch,works_with,branch_supplier
+
+1--Find all employees
+Select * from employee;
+
+2--Find all clients
+Select * from client;
+
+3--Find all employee ordered by salary
+Select * from employee order by salary;
+
+4--Find all employee ordered by sex then name
+Select * From employee order by sex,fname,lname;
+
+5--Find the first 5 employees in the table
+Select * from employee Limit 5;
+
+6--Find all out the different genders
+Select Distinct sex from employee;
+
+7--Find the number of employees
+Select Count(emp_id) From employee;
+
+8--Find the number of employees born after 1970
+Select Count(emp_id) from employee where birth_date>='1971-01-01';
+
+9--Find the average of all employee's salaries
+Select AVG(Salary) from employee;
+
+10----Find the sum of all employee's salaries
+Select SUM(Salary) from employee;
+
+11--Find out how many males and females there are
+Select COUNT(sex),sex from employee Group By sex
+
+12--Find the total sales of each salesman
+Select SUM(total_sales), emp_id From works_with Group By emp_id;
+
+13
+
+
